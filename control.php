@@ -60,8 +60,6 @@ if(isset($_POST['r'])){
 	?>	
 
 </form>
-
-
 <form action="" method="post">
     <button type="submit" name="l" id="l"  > < </button>
 	<?php
@@ -97,9 +95,22 @@ if(isset($_POST['d'])){
 	?>	
 	
 </form>
+
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "25b9bb75-706a-45c4-a283-d9abcaa7c56e", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "5d429493-bb38-4a5b-8c23-7f7ebd260d7a", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
 </body>
-
-
 
 </main>
 
